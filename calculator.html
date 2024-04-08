@@ -1,0 +1,76 @@
+
+<html >
+<head>
+   <title>Calculator </title>
+   <style>
+    input[type ="button"]
+    {
+        height: 100%;
+        width: 100%;
+    }
+    body{
+        background-color: azure;
+        display: flex;
+        width:100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        height: 300px;
+        width: 300px;
+    }
+   </style>
+   <script>
+    function calcu(val)
+    {
+        document.getElementById("a").value+=val;
+    }
+    function clr()
+    {
+        document.getElementById("a").value = " ";
+    }
+    function solve()
+    {
+         var x =document.getElementById("a").value;
+         var y = eval(x);// eval means equal
+         document.getElementById("a").value=y;
+    }
+   </script>
+</head>
+<body>
+    <!--calculator using html css and js by table-->
+   <table>
+    <tr>
+        <th colspan="3"><input type="text" id="a"></th>
+        <th><input type="button" id="" value="C" onclick="clr()"></th>
+    </tr>
+    <tr>
+        <th><input type="button" id="" value="1" onclick="calcu(1)"></th>
+        <th><input type="button" id="" value="2" onclick="calcu(2)"></th>
+        <th><input type="button" id="" value="3" onclick="calcu(3)"></th>
+        <th><input type="button" id="" value="/" onclick="calcu('/')"></th>
+    </tr>
+    <tr>
+        <th><input type="button" id="" value="4" onclick="calcu(4)"></th>
+        <th><input type="button" id="" value="5" onclick="calcu(5)"></th>
+        <th><input type="button" id="" value="6" onclick="calcu(6)"></th>
+        <th><input type="button" id="" value="*" onclick="calcu('*')"></th>
+    </tr>
+    <tr>
+        <th><input type="button" id="" value="7" onclick="calcu(7)"></th>
+        <th><input type="button" id="" value="8" onclick="calcu(8)"></th>
+        <th><input type="button" id="" value="9" onclick="calcu(9)"></th>
+        <th><input type="button" id="" value="-" onclick="calcu('-')"></th>
+    </tr>
+    <tr>
+        <th><input type="button" id="" value="." onclick="calcu('.')"></th>
+        <th><input type="button" id="" value="0" onclick="calcu(0)"></th>
+        <th><input type="button" id="" value="=" onclick="solve()"></th>
+        <th><input type="button" id="" value="+" onclick="calcu('+')"></th>
+    </tr>
+   
+    
+</table>
+</body>
+</html>
